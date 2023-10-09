@@ -27,7 +27,7 @@ class PineconeResultsStorage:
         self.llama_model_path = llama_model_path
 
         results_store_name = results_store_name
-        dimension = 1536 if not self.llm_model.startswith("llama") else 5120
+        dimension = 1536
         metric = "cosine"
         pod_type = "p1"
         if results_store_name not in pinecone.list_indexes():
